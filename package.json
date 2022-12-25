@@ -1,0 +1,14 @@
+{
+  "name": "simple-error-statistics",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-art-template": "^1.0.1"
+  }
+}

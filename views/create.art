@@ -1,0 +1,39 @@
+{{extend '../layout'}}
+
+{{block 'title'}}创建新错题统计 · SES{{/block}}
+
+{{block 'body'}}
+<div class="draft">
+  <h2>创建新错题统计</h2>
+  <form>
+    <p><span class="required">统计名：</span><input required maxlength="100"></p>
+    <p><span class="required">截止时间：</span><input type="datetime-local" required></p>
+    <p><span>要求填写全部题目（通常情况下只需要统计错题，但在未公布答案等情况下，可以要求填写全部题目，系统可自动计算出正确率等更多信息）</span><input type="checkbox"></p>
+    <p><span>总人数：</span><input type="number" min="1" placeholder="非必填"></p>
+    <br>
+    <div class="create-qgroup">
+      <div class="create-qgroup-item">
+        <span>1-20</span><span>单选ABCD</span><span>删除</span>
+      </div>
+    </div>
+    <div class="create-qgroup-new">
+      <span>
+        <input type="number" placeholder="起始题号"><span>-</span><input type="number" placeholder="结束题号">
+      </span>
+      <select>
+        <option>单选ABCD</option>
+        <option>多选ABCD</option>
+        <option>单选ABCDEF</option>
+        <option>多选ABCDEF</option>
+        <option>填空</option>
+        <option>判断(0错误/1正确)</option>
+        <option>其他(仅提供一个按钮让学生选择是否错误)</option>
+      </select>
+      <input placeholder="正确答案（非必填）">
+      <span>添加</span>
+    </div>
+    <br>
+    <button type="submit">提交</button>
+  </form>
+</div>
+{{/block}}

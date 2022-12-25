@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #212121;
+}
+
+.draft {
+  padding: 60px 40px;
+  background-color: #efefef;
+  background-image: linear-gradient(#e7e6e6 1px, transparent 0),
+    linear-gradient(90deg, #e7e6e6 1px, transparent 0);
+  background-size: 18px 18px, 18px 18px;
+  background-position: center;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 8px #bdbdbd;
+}
+
+.draft:before,
+.draft:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  background-color: #ffffff;
+  height: 20px;
+  box-shadow: 64px 0 0 0 #fff, calc(64px * 2) 0 0 0 #fff,
+    calc(64px * 3) 0 0 0 #fff, calc(64px * 4) 0 0 0 #fff,
+    calc(64px * 5) 0 0 0 #fff, -64px 0 0 0 #fff, calc(64px * -2) 0 0 0 #fff,
+    calc(64px * -3) 0 0 0 #fff, calc(64px * -4) 0 0 0 #fff,
+    calc(64px * -5) 0 0 0 #fff;
+}
+
+.draft:before {
+  top: 0;
+  width: 8px;
+}
+
+.draft:after {
+  top: 18px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* widget */
+input {
+  font-family: inherit;
+  width: 180px;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+form p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.required::before {
+  content: '*';
+  color: red;
+}
+
+input:invalid {
+  color: red;
+}
+
+button {
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 1px solid #757575;
+  border-radius: 2px;
+}
+
+.create-qgroup {
+  border: 1px solid #757575;
+  border-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+.create-qgroup-item {
+  padding: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-qgroup-new {
+  border: 1px solid #757575;
+  border-radius: 4px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.create-qgroup-new * {
+  margin: 2px 0;
+}
+
+.create-qgroup-new input {
+  font-size: 0.9rem;
+}
+
+.create-qgroup-new span input {
+  width: 4em;
+}
+
+.create-qgroup-new select {
+  word-break: break-all;
+  max-width: 100%;
+}
